@@ -1,4 +1,4 @@
-# ASP.NET
+# ASP.NET + MySQL
 
 Este é um projeto ASP.NET para criar uma aplicação web utilizando o framework ASP.NET Core MVC.
 
@@ -24,8 +24,13 @@ git clone https://github.com/matheusmoc/business_management_mvc.git
 cd business_management_mvc
 code .
 ```
+3. **Execute o comando para buildar os dados no MySQL:**
 
-3. **Execute o projeto:**
+```bash
+dotnet ef database update
+```
+
+4. **Execute o projeto:**
 
 Abra o terminal no Visual Studio Code e execute o seguinte comando:
 
