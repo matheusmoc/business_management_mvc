@@ -1,0 +1,36 @@
+@model ManagementModel
+@{
+    ViewData["Title"] = "Editar gestor";
+}
+
+
+<div class="container p-5 rounded-3">
+    <form method="post" asp-controller="Management" asp-action="Edit">
+            <input type="hidden" asp-for="Id" />
+            <div class="mb-3">
+                <label class="form-label">Nome</label>
+                <input asp-for="Name" type="text" name="Name" class="form-control">
+                <div id="emailHelp" class="form-text">Informe o nome e sobrenome.</div>
+                <span class="fs-6 text-danger" asp-validation-for="Name"></span>
+            </div>
+            
+            <div class="mb-3">
+                <label class="form-label">Cargo</label>
+                <input asp-for="Role" type="text" name="Role" class="form-control">
+                <div id="emailHelp" class="form-text">Informe o cargo.</div>
+                <span class="fs-6 text-danger" asp-validation-for="Role"></span>
+            </div>
+        
+            <div class="mb-3">
+                <label class="form-label">Salario</label>
+                <input asp-for="Salary" type="number" name="Salary" class="form-control">
+                <div id="emailHelp" class="form-text">Informe o salário.</div>
+                <span class="fs-6 text-danger" asp-validation-for="Salary"></span>
+            </div>
+        
+        <div class="d-flex gap-5">
+            <button type="submit" class="btn btn-success w-50">Cadastrar</button>
+            <a class="btn btn-warning  w-50">voltar</a>
+        </div>
+    </form>
+</div>
